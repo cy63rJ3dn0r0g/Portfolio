@@ -1,0 +1,1489 @@
+:root {
+  --page2bgd: whitesmoke;
+  --purple: blueviolet;
+  --orange: goldenrod;
+}
+* {
+  padding: 0;
+  margin: 0;
+}
+html,
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background: rgb(10, 10, 10);
+  overflow-x: hidden;
+}
+.page1 {
+  width: 100%;
+  height: 100vh;
+}
+.container {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-rows: 1fr;
+  margin-top: 10vh;
+  margin-left: 10vw;
+  height: 80vh;
+}
+.intro {
+  visibility: hidden;
+}
+.halfText {
+  position: relative;
+  top: 50px;
+  animation: blinking 6s ease infinite;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: repeat(3, 15%);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 250px;
+  align-content: space-evenly;
+  text-align: center;
+}
+.item {
+  color: rgb(247, 196, 196);
+  font-family: "myFont2";
+  cursor: pointer;
+  width: 450px;
+}
+@font-face {
+  font-family: "myFont";
+  src: url(assets/Fonts/Rockness.ttf);
+}
+@font-face {
+  font-family: "myFont2";
+  src: url(assets/Fonts/OstrichSans-Bold.otf);
+}
+@font-face {
+  font-family: "myFont3";
+  src: url(assets/Fonts/OratorStd-Slanted.otf);
+}
+/* Hello - About ME */
+.about {
+  position: relative;
+  left: 0px;
+  top: -50px;
+  text-shadow: 1px 1px 65px rgb(253, 245, 245);
+  width: 100%;
+  color: aliceblue;
+}
+.about::after {
+  content: "Hello";
+  font-size: 8rem;
+  transition: all 1s;
+}
+.about:hover:after {
+  content: "About Me";
+  font-size: 5.2rem;
+  top: 0px;
+}
+.about:hover {
+  width: 450px;
+  color: red;
+  left: -50px;
+  text-shadow: 1px 1px 65px red;
+}
+/* Iam - portfolio */
+.portfolio {
+  position: relative;
+  color: white;
+  text-shadow: 1px 1px 55px rgb(253, 245, 245);
+}
+.portfolio::after {
+  content: "I am";
+  transition: all 1s;
+  font-size: 7rem;
+}
+.portfolio:hover:after {
+  content: "Portfolio";
+  font-size: 5rem;
+}
+.portfolio:hover {
+  width: 100%;
+  color: var(--purple);
+  text-shadow: 1px 1px 65px var(--purple);
+}
+/* Darko - Contact */
+.contact {
+  position: relative;
+  left: -150px;
+  color: white;
+  text-shadow: 1px 1px 65px rgb(253, 245, 245);
+}
+.contact::after {
+  content: "Darko";
+  font-size: 5rem;
+  transition: all 1s;
+}
+.contact:hover:after {
+  content: "Contact";
+  font-size: 6rem;
+}
+.contact:hover {
+  width: 100%;
+  color: limegreen;
+  text-shadow: 1px 1px 65px lime;
+  left: 50px;
+}
+.page2 {
+  width: 100%;
+  height: 310vh;
+  position: absolute;
+  top: 100vh;
+  background: var(--page2bgd);
+}
+q {
+  position: absolute;
+  top: 5vh;
+  font-size: 2rem;
+  font-weight: 600;
+  width: 280px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  color: blueviolet;
+  cursor: default;
+  font-family: "myFont";
+}
+.containerP2 {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  top: 30vh;
+}
+.image {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-auto-flow: row;
+  grid-template-areas:
+    "circle"
+    "myImage"
+    "shape"
+    "text";
+  grid-area: image;
+  position: absolute;
+  top: 320px;
+  left: 50%;
+  transform: translateX(-50%);
+  align-content: center;
+  justify-items: center;
+  text-align: center;
+}
+.circle {
+  grid-area: circle;
+  background: rgba(10, 10, 10, 0.5);
+  width: 100%;
+  height: 300px;
+  border-radius: 50%;
+  z-index: 1;
+  position: relative;
+  top: -300px;
+}
+.myImage {
+  position: relative;
+  top: 10px;
+  left: 50px;
+  grid-area: myImage;
+  background: url(assets/fotka.png);
+  background-size: contain;
+  width: 300px;
+  height: 300px;
+  background-repeat: no-repeat;
+  z-index: 1;
+  transform: scale(0.95) rotate(5deg);
+}
+.shape {
+  grid-area: shape;
+  background: var(--purple);
+  width: 230px;
+  position: relative;
+  top: -540px;
+  height: 650px;
+}
+.text {
+  grid-area: text;
+  width: 230px;
+  font-weight: 600;
+  position: absolute;
+  bottom: -150px;
+  cursor: default;
+  color: var(--orange);
+}
+q {
+  text-shadow: 0px 0px 45px var(--purple);
+  color: var(--orange);
+}
+p {
+  font-size: 2rem;
+  position: relative;
+  top: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.par1 {
+  font-family: "myFont3";
+  font-weight: 1000;
+  font-size: 2.5rem;
+  width: 230px;
+}
+.par2 {
+  font-family: "myFont3";
+  width: 230px;
+}
+.par3 {
+  font-family: "myFont3";
+  background: var(--orange);
+  color: var(--page2bgd);
+  border-radius: 5px;
+  text-align: center;
+  width: 230px;
+  position: relative;
+}
+.download {
+  border: 1px solid blueviolet;
+  width: 100%;
+  height: 100px;
+  position: relative;
+  top: 130vh;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.dwnSert {
+  background: url(assets/certificate.png);
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+}
+.dwnCV {
+  background: url(assets/recruitment.png);
+  background-size: contain;
+  width: 100px;
+  height: 100px;
+}
+.skillWrapper {
+  width: 100vw;
+  top: 150vh;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+}
+.skillText {
+  width: 100%;
+  font-size: 4rem;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: var(--orange);
+  font-weight: 700;
+  position: relative;
+  cursor: default;
+  text-align: center;
+}
+.skill-bar {
+  position: relative;
+  grid-area: skill-bar;
+  display: grid;
+  grid-template-columns: repeat(3, 33%);
+  grid-template-rows: repeat(4, 1fr);
+  grid-auto-columns: minmax(1, 1fr);
+  grid-auto-flow: column;
+  grid-template-areas:
+    ". css ."
+    "html . javaScript"
+    ". ai ."
+    "ps . basketball";
+  height: 120vh;
+  cursor: default;
+  grid-auto-flow: row;
+  justify-content: space-evenly;
+  align-content: center;
+  justify-items: center;
+  align-items: center;
+}
+.ps {
+  grid-area: ps;
+}
+.circular-progress1,
+.circular-progress2,
+.circular-progress3,
+.circular-progress4,
+.circular-progress5,
+.circular-progress6 {
+  position: relative;
+  height: 100px;
+  width: 100px;
+  background: conic-gradient(var(--purple) 1.6deg, var(--orange) 0deg);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.circular-progress1::before,
+.circular-progress2::before,
+.circular-progress3::before,
+.circular-progress4::before,
+.circular-progress5::before,
+.circular-progress6::before {
+  content: "";
+  position: absolute;
+  height: 80px;
+  width: 80px;
+  background: var(--page2bgd);
+  border-radius: 50%;
+}
+.progress-value1,
+.progress-value2,
+.progress-value3,
+.progress-value4,
+.progress-value5,
+.progress-value6 {
+  position: relative;
+  font-size: 1.8rem;
+  color: blueviolet;
+}
+.psText1,
+.psText2,
+.psText3,
+.psText4,
+.psText5,
+.psText6 {
+  color: var(--orange);
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+.ps,
+.ai,
+.html,
+.javaScript,
+.basketball,
+.css {
+  border-radius: 10px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.basketball {
+  grid-area: basketball;
+}
+.ai {
+  grid-area: ai;
+}
+.html {
+  grid-area: html;
+}
+.css {
+  grid-area: css;
+}
+.javaScript {
+  grid-area: javaScript;
+}
+.page3 {
+  width: 100%;
+  height: 190vh;
+  position: absolute;
+  top: 410vh;
+}
+.containterP3 {
+  width: 100vw;
+  height: 190vh;
+  z-index: 1;
+}
+.scene {
+  width: 350px;
+  height: 250px;
+  position: relative;
+  perspective: 1000px;
+  margin: auto;
+  top: 50%;
+}
+.carousel {
+  width: 100%;
+  height: 100%;
+  top: -50px;
+  position: absolute;
+  transform: translateZ(-269px);
+  transform-style: preserve-3d;
+  transition: transform 1s;
+  display: flex;
+  justify-content: center;
+}
+.ProjText {
+  width: 350px;
+  height: 150px;
+  position: absolute;
+  top: 10px;
+  font-size: 5rem;
+  color: aliceblue;
+  display: flex;
+  justify-content: center;
+  font-family: "myFont2";
+  cursor: default;
+}
+.project {
+  position: absolute;
+  width: 250px;
+  height: 265px;
+  top: 0px;
+  border: 1px solid var(--orange);
+  line-height: 180px;
+  font-size: 10rem;
+  font-weight: bold;
+  color: white;
+  transition: transform 1s, opacity 1s;
+}
+.one {
+  background: url(assets/gif1.gif);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.two {
+  background: url(assets/gif2.gif);
+  background-size: cover;
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.three {
+  background: url(assets/gif3.gif);
+  background-size: cover;
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.four {
+  background: url(assets/gif4.2.gif);
+  background-size: cover;
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.five {
+  background: url(assets/gif5.gif);
+  background-size: cover;
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.six {
+  background: url(assets/gif7.gif);
+  background-size: cover;
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.seven {
+  background: url(assets/gif6.gif);
+  background-size: cover;
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.eight {
+  background: url(assets/gif8.gif);
+  background-size: cover;
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.nine {
+  background: url(assets/gif36.gif);
+  background-size: cover;
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+  transform: scale(0.5);
+}
+.ten {
+  background: url(assets/gif35.gif);
+  background-size: cover;
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.eleven {
+  background: url(assets/gif11.gif);
+  background-size: cover;
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.twelve {
+  background: url(assets/gif12.gif);
+  background-size: cover;
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.thirteen {
+  background: url(assets/gif14.gif);
+  background-size: cover;
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.fourteen {
+  background: url(assets/gif13.gif);
+  background-size: cover;
+  object-fit: fill;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.one {
+  transform: rotateX(25.7deg) translateZ(584px);
+}
+.two {
+  transform: rotateX(51.4deg) translateZ(584px);
+}
+.three {
+  transform: rotateX(77.1deg) translateZ(584px);
+}
+.four {
+  transform: rotateX(102.8deg) translateZ(584px);
+}
+.five {
+  transform: rotateX(128.5deg) translateZ(584px);
+}
+.six {
+  transform: rotateX(154.2deg) translateZ(584px);
+}
+.seven {
+  transform: rotateX(179.9deg) translateZ(584px);
+}
+.eight {
+  transform: rotateX(205.6deg) translateZ(584px);
+}
+.nine {
+  transform: rotateX(231.3deg) translateZ(584px);
+}
+.ten {
+  transform: rotateX(257deg) translateZ(584px);
+}
+.eleven {
+  transform: rotateX(282.7deg) translateZ(584px);
+}
+.twelve {
+  transform: rotateX(308.4deg) translateZ(584px);
+}
+.thirteen {
+  transform: rotateX(334.1deg) translateZ(584px);
+}
+.fourteen {
+  transform: rotateX(360deg) translateZ(584px);
+}
+.carousel-options {
+  position: absolute;
+  bottom: -15vh;
+  display: flex;
+  flex-direction: row;
+  border: none;
+  display: flex;
+  justify-content: center;
+}
+.prevButton,
+.nextButton {
+  width: 150px;
+  height: 50px;
+  font-size: 1.5rem;
+  border-radius: 20px;
+  border: 1px var(--purple) solid;
+  background: var(--orange);
+  color: var(--purple);
+  font-weight: 600;
+  margin: 10px;
+  position: relative;
+  opacity: 0.2;
+}
+.prevButton:hover,
+.nextButton:hover {
+  opacity: 1;
+}
+.page4 {
+  position: absolute;
+  top: 590vh;
+  height: 80vh;
+  width: 100%;
+}
+.form {
+  width: 80%;
+  height: 60%;
+  background: var(--purple);
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  top: 20%;
+  border-radius: 20px;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  top: 5%;
+}
+input {
+  font-size: 1.3rem;
+  font-family: "myFont3";
+  width: 80%;
+  border-radius: 5px;
+  background: var(--page2bgd);
+  border: 2px solid black;
+  margin: 5px;
+}
+.submit {
+  width: 25%;
+  font-family: "myFont3";
+  font-weight: 600;
+  font-size: 1.3rem;
+  margin: 15px;
+  background: var(--orange);
+  border: 2px solid black;
+  height: 5vh;
+  resize: none;
+  border-radius: 10px;
+}
+.formMsg {
+  width: 100%;
+}
+::placeholder {
+  color: var(--orange);
+}
+.formTXT {
+  width: 80%;
+  height: 150px;
+  font-size: 1.3rem;
+  font-family: "myFont3";
+  position: relative;
+  top: 5px;
+  left: 50%;
+  transform: translate(-50%);
+  resize: none;
+  border-radius: 5px;
+  background: var(--page2bgd);
+  border: 2px solid black;
+}
+/* Animations */
+@keyframes blinking {
+  15%,
+  25%,
+  60%,
+  95% {
+    opacity: 0;
+  }
+  0%,
+  14%,
+  16%,
+  24%,
+  26%,
+  59%,
+  61%,
+  94%,
+  96%,
+  100% {
+    opacity: 1;
+  }
+}
+.halfPic,
+.scrolling {
+  visibility: hidden;
+}
+@media screen and (min-width: 768px) {
+  .halfText {
+    position: relative;
+    top: 35px;
+    row-gap: 150px;
+    align-content: center;
+  }
+  .item {
+    font-size: 9rem;
+    line-height: 200px;
+    width: 400px;
+  }
+  .about::after {
+    font-size: 16rem;
+  }
+  .about:hover:after {
+    font-size: 15rem;
+  }
+  .about:hover {
+    width: 900px;
+  }
+  .portfolio {
+    right: -300px;
+  }
+  .portfolio::after {
+    font-size: 16rem;
+  }
+  .portfolio:hover:after {
+    font-size: 15rem;
+  }
+  .portfolio:hover {
+    right: 0px;
+  }
+  .contact {
+    left: 0;
+  }
+  .contact::after {
+    font-size: 15rem;
+  }
+  .contact:hover:after {
+    font-size: 16rem;
+  }
+  q {
+    font-size: 4rem;
+    width: 450px;
+  }
+  .image {
+    grid-auto-flow: column;
+    width: 100%;
+    grid-template-areas: "circle" "myImage" "shape" "text";
+    grid-template-columns: 400px;
+    grid-template-rows: 450px;
+    left: 60vh;
+  }
+  .circle {
+    grid-area: circle;
+    background: rgba(10, 10, 10, 0.5);
+    position: relative;
+    right: -300px;
+    width: 100%;
+    height: 400px;
+  }
+  .myImage {
+    width: 400px;
+    height: 400px;
+    top: 20px;
+    left: 70px;
+  }
+  .shape {
+    width: 800px;
+    height: 330px;
+    top: -710px;
+    left: 0px;
+  }
+  .text {
+    top: 50px;
+    width: 330px;
+    left: 80px;
+  }
+  p {
+    font-size: 2.3rem;
+    width: 450px;
+    text-align: start;
+  }
+  .par1 {
+    width: 450px;
+  }
+  .par2 {
+    width: 450px;
+  }
+  .par3 {
+    text-align: start;
+    width: 450px;
+  }
+  .skillWrapper {
+    top: 60vh;
+    position: absolute;
+  }
+  .skillText {
+    font-size: 6rem;
+    top: -50px;
+  }
+  .skill-bar {
+    grid-template-columns: 300px;
+    grid-template-rows: 300px;
+    height: 90vh;
+  }
+  .circular-progress1,
+  .circular-progress2,
+  .circular-progress3,
+  .circular-progress4,
+  .circular-progress5,
+  .circular-progress6 {
+    height: 250px;
+    width: 250px;
+  }
+  .circular-progress1::before,
+  .circular-progress2::before,
+  .circular-progress3::before,
+  .circular-progress4::before,
+  .circular-progress5::before,
+  .circular-progress6::before {
+    position: absolute;
+    height: 200px;
+    width: 200px;
+  }
+  .psText1,
+  .psText2,
+  .psText3,
+  .psText4,
+  .psText5,
+  .psText6 {
+    font-size: 2.4rem;
+  }
+  .progress-value1,
+  .progress-value2,
+  .progress-value3,
+  .progress-value4,
+  .progress-value5,
+  .progress-value6 {
+    font-size: 3.8rem;
+  }
+  .download {
+    top: 40vh;
+  }
+  .dwnSert,
+  .dwnCV  {
+    transform: scale(2);
+  }
+
+  .page2 {
+    height: 200vh;
+    width: 100%;
+  }
+  .project {
+    width: 400px;
+  }
+  .scene {
+    top: 40%;
+  }
+  .ProjText {
+    width: 900px;
+    font-size: 10rem;
+  }
+  .carousel-options {
+    bottom: -40vh;
+    left: -50px;
+  }
+  .prevButton:hover,
+  .nextButton:hover {
+    opacity: 1;
+  }
+  .prevButton,
+  .nextButton {
+    width: 200px;
+    opacity: 0.3;
+  }
+  .page3 {
+    top: 300vh;
+    height: 120vh;
+  }
+  .containterP3 {
+    width: 100vw;
+    height: 140vh;
+  }
+  .page4 {
+    top: 420vh;
+    height: 50vh;
+  }
+}
+@media screen and (min-width: 1023px) {
+    html,
+    body {
+      overflow-x: hidden;
+    }
+    .halfPic,
+    .scrolling {
+      visibility: visible;
+    }
+    .halfText {
+      visibility: hidden;
+    }
+    .page1 {
+      position: absolute;
+      top: -5vh;
+      height: 100vh;
+    }
+    .container {
+      grid-template-columns: 0% 25% 75%;
+      position: relative;
+      top: -100px;
+    }
+    .halfPic {
+      width: 100%;
+      height: 110vh;
+    }
+    .imgMe {
+      background: url(assets/portfolio23.png);
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      transform: scale(1);
+      background-position: -430px;
+      object-fit: fill;
+      background-repeat: no-repeat;
+    }
+    .intro {
+      visibility: visible;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(3, 80px);
+      position: relative;
+      font-size: 2rem;
+      height: 400px;
+      width: 340px;
+      top: 300px;
+      left: -50px;
+      cursor: default;
+    }
+    .laFunction {
+      font-size: 2.2rem;
+      font-weight: 600;
+      position: relative;
+      top: 12vh;
+      color: var(--purple);
+    }
+    .span2 {
+      color: beige;
+    }
+    .span1,
+    .span3,
+    .span4 {
+      color: goldenrod;
+    }
+    .hireMe {
+      position: absolute;
+      width: 150px;
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 600;
+      height: 50px;
+      border-radius: 10px;
+      background: beige;
+      cursor: pointer;
+      border: none;
+    }
+    .halfText {
+      position: relative;
+      top: 35px;
+      row-gap: 150px;
+      align-content: center;
+    }
+    .item {
+      font-size: 9rem;
+      line-height: 200px;
+      width: 400px;
+    }
+    q {
+      font-size: 3rem;
+      width: 350px;
+    }
+    p {
+      font-size: 2rem;
+    }
+    .containerP2 {
+      height: 120vh;
+    }
+    .image {
+      display: grid;
+      grid-auto-columns: 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 350px;
+      gap: 0px 0px;
+      grid-template-areas: "circle" "myImage" "shape" "text";
+      top: 0;
+    }
+    .circle {
+      grid-area: circle;
+      height: 350px;
+      width: 350px;
+      bottom: 100px;
+      border-radius: 50%;
+      position: absolute;
+      top: 60px;
+      right: -145px;
+      transform: scale(1);
+      overflow: hidden;
+    }
+    .myImage {
+      position: relative;
+      top: 15px;
+      left: 60px;
+      grid-area: myImage;
+      width: 340px;
+      height: 340px;
+      transform: scale(1);
+    }
+    .shape {
+      grid-area: shape;
+      width: 860px;
+      position: relative;
+      top: -250px;
+      left: 80px;
+      height: 270px;
+      border-radius: 10px;
+    }
+    .text {
+      grid-area: text;
+      font: 2rem;
+      font-size: 1.9rem;
+      font-weight: 600;
+      position: relative;
+      width: 500px;
+      top: 35px;
+      left: 0px;
+    }
+    .skillWrapper {
+      top: 120vh;
+      display: block;
+    }
+    .skillText {
+      font-size: 10rem;
+      top: -300px;
+    }
+    .skill-bar {
+      top: 100px;
+      height: 60vh;
+    }
+    .download {
+      transform: scale(0.8);
+      top: 60vh;
+    }
+    .page2 {
+      height: 300vh;
+    }
+    .project {
+      width: 450px;
+      height: 350px;
+    }
+    .carousel-options {
+      left: 0px;
+      bottom: -20vh;
+    }
+    .prevButton:hover,
+    .nextButton:hover {
+      opacity: 1;
+    }
+    .prevButton,
+    .nextButton {
+      width: 200px;
+      opacity: 1;
+    }
+    .scene {
+      width: 450px;
+      top: 40%;
+    }
+    .ProjText {
+      top: -50px;
+      width: 1000px;
+      font-size: 10rem;
+    }
+    .carousel {
+      transform: translateZ(-988px);
+    }
+    .one {
+      transform: rotateY(25.7deg) translateZ(1014px);
+    }
+    .two {
+      transform: rotateY(51.4deg) translateZ(1014px);
+    }
+    .three {
+      transform: rotateY(77.1deg) translateZ(1014px);
+    }
+    .four {
+      transform: rotateY(102.8deg) translateZ(1014px);
+    }
+    .five {
+      transform: rotateY(128.5deg) translateZ(1014px);
+    }
+    .six {
+      transform: rotateY(154.2deg) translateZ(1014px);
+    }
+    .seven {
+      transform: rotateY(179.9deg) translateZ(1014px);
+    }
+    .eight {
+      transform: rotateY(205.6deg) translateZ(1014px);
+    }
+    .nine {
+      transform: rotateY(231.3deg) translateZ(1014px);
+    }
+    .ten {
+      transform: rotateY(257deg) translateZ(1014px);
+    }
+    .eleven {
+      transform: rotateY(282.7deg) translateZ(1014px);
+    }
+    .twelve {
+      transform: rotateY(308.4deg) translateZ(1014px);
+    }
+    .thirteen {
+      transform: rotateY(334.1deg) translateZ(1014px);
+    }
+    .fourteen {
+      transform: rotateY(360deg) translateZ(1014px);
+    }
+    .page3 {
+      top: 410vh;
+      height: 80vh;
+    }
+    .containterP3 {
+      height: 80vh;
+    }
+    .page4 {
+      top: 500vh;
+      height: 80vh;
+    }
+}
+@media screen and (min-width: 1365px) {
+    html,
+    body {
+      overflow-x: hidden;
+    }
+    .halfPic,
+    .scrolling {
+      visibility: visible;
+    }
+    .halfText {
+      visibility: hidden;
+    }
+    .page1 {
+      position: absolute;
+      top: -5vh;
+      height: 100vh;
+    }
+    .container {
+      grid-template-columns: 0% 25% 75%;
+      position: relative;
+      top: -100px;
+    }
+    .halfPic {
+      width: 100%;
+      height: 110vh;
+    }
+    .imgMe {
+      background: url(assets/portfolio23.png);
+      background-size: cover;
+      width: 100%;
+      height: 100%;
+      transform: scale(1);
+      background-position: -300px;
+      object-fit: fill;
+      background-repeat: no-repeat;
+    }
+    .intro {
+      visibility: visible;
+      display: grid;
+      grid-template-columns: 100%;
+      grid-template-rows: repeat(3, 80px);
+      position: relative;
+      font-size: 1rem;
+      height: 400px;
+      width: 300px;
+      top: 300px;
+      left: 0px;
+      cursor: default;
+    }
+    .halfText {
+      position: relative;
+      top: 35px;
+      row-gap: 150px;
+      align-content: center;
+    }
+    .item {
+      font-size: 9rem;
+      line-height: 200px;
+      width: 400px;
+    }
+    q {
+      font-size: 3rem;
+      width: 350px;
+    }
+    .containerP2 {
+      display: grid;
+      height: 300vh;
+      top: 0;
+    }
+    .image {
+      left: -100vw;
+      top: -270vh;
+    }
+    .circle {
+      grid-area: circle;
+      height: 400px;
+      width: 400px;
+      bottom: 100px;
+      border-radius: 50%;
+      position: relative;
+      top: 70px;
+      left: 500px;
+      transform: scale(1.2);
+    }
+    .myImage {
+      position: relative;
+      top: 05px;
+      left: 80px;
+      grid-area: myImage;
+      width: 400px;
+      height: 400px;
+    }
+    .shape {
+      grid-area: shape;
+      width: 1125px;
+      position: relative;
+      top: -250px;
+      left: 50px;
+      height: 370px;
+    }
+    .text {
+      grid-area: text;
+      font-size: 2rem;
+      font-weight: 600;
+      position: relative;
+      width: 600px;
+      top: 75px;
+      left: 0px;
+    }
+    .download {
+      top: 110vh;
+      transform: scale(1);
+    }
+    .skillWrapper {
+      top: 169vh;
+      left: 50%;
+      transform: translateX(-50%);
+      height: 150vh;
+    }
+    .skillText {
+      text-align: center;
+    }
+    .skill-bar {
+      width: 100vw;
+    }
+    .page2 {
+      height: 320vh;
+    }
+    .page3 {
+      top: 430vh;
+    }
+    .ProjText {
+      width: 100%;
+      text-align: center;
+      font-size: 10rem;
+    }
+    .carousel-options {
+      z-index: 1;
+      bottom: -20vh;
+    }
+    .page4 {
+      top: 515vh;
+    }
+}
+@media screen and (min-width: 1600px) {
+    .intro {
+      top: 300px;
+      transform: scale(1.3);
+    }
+    .shape {
+      width: 1300px;
+      position: relative;
+      height: 370px;
+    }
+    .circle {
+      left: 540px;
+      transform: scale(1.3);
+    }
+    .text {
+      left: 69px;
+    }
+    p {
+      top: -90px;
+      font-size: 2.8rem;
+    }
+    .par1 {
+      font-size: 3.5rem;
+    }
+    .par1,
+    .par2,
+    .par3 {
+      width: 700px;
+    }
+    .myImage {
+      left: 60px;
+    }
+    .page2 {
+      height: 300vh;
+    }
+    .skillWrapper {
+      top: 160vh;
+    }
+    .page3 {
+      top: 420vh;
+    }
+    .ProjText {
+      width: 1600px;
+      font-size: 10rem;
+    }
+    .project {
+      width: 600px;
+      height: 350px;
+    }
+    .carousel {
+      transform: translateZ(-1280px);
+    }
+    .one {
+      transform: rotateY(25.7deg) translateZ(1353px);
+    }
+    .two {
+      transform: rotateY(51.4deg) translateZ(1353px);
+    }
+    .three {
+      transform: rotateY(77.1deg) translateZ(1353px);
+    }
+    .four {
+      transform: rotateY(102.8deg) translateZ(1353px);
+    }
+    .five {
+      transform: rotateY(128.5deg) translateZ(1353px);
+    }
+    .six {
+      transform: rotateY(154.2deg) translateZ(1353px);
+    }
+    .seven {
+      transform: rotateY(179.9deg) translateZ(1353px);
+    }
+    .eight {
+      transform: rotateY(205.6deg) translateZ(1353px);
+    }
+    .nine {
+      transform: rotateY(231.3deg) translateZ(1353px);
+    }
+    .ten {
+      transform: rotateY(257deg) translateZ(1353px);
+    }
+    .eleven {
+      transform: rotateY(282.7deg) translateZ(1353px);
+    }
+    .twelve {
+      transform: rotateY(308.4deg) translateZ(1353px);
+    }
+    .thirteen {
+      transform: rotateY(334.1deg) translateZ(1353px);
+    }
+    .fourteen {
+      transform: rotateY(360deg) translateZ(1353px);
+    }
+    .page4 {
+      top: 510vh;
+      height: 70vh;
+    }
+}
+@media screen and (min-width: 1920px) {
+    .intro {
+      left: 6.9vw;
+      top: 250px;
+      transform: scale(1.6);
+    }
+    .shape {
+      width: 1600px;
+      height: 420px;
+    }
+    .circle {
+      top: 85px;
+      left: 690px;
+      transform: scale(1.4);
+    }
+    .text {
+      left: 200px;
+    }
+    p {
+      top: -69px;
+      font-size: 3.35rem;
+    }
+    .par1 {
+      font-size: 5rem;
+    }
+    .par1,
+    .par2,
+    .par3 {
+      width: 900px;
+    }
+    .page2 {
+      height: 270vh;
+    }
+    .download {
+      top: 90vh;
+    }
+    .skillWrapper {
+      top: 140vh;
+    }
+    .page3 {
+      top: 380vh;
+      height: 140vh;
+    }
+    .containterP3 {
+      height: 120vh;
+    }
+    .ProjText {
+      width: 1900px;
+      font-size: 15rem;
+    }
+    .project {
+      width: 900px;
+      height: 600px;
+    }
+    .carousel {
+      transform: translateZ(-1780px);
+    }
+    .one {
+      transform: rotateY(25.7deg) translateZ(2029px);
+    }
+    .two {
+      transform: rotateY(51.4deg) translateZ(2029px);
+    }
+    .three {
+      transform: rotateY(77.1deg) translateZ(2029px);
+    }
+    .four {
+      transform: rotateY(102.8deg) translateZ(2029px);
+    }
+    .five {
+      transform: rotateY(128.5deg) translateZ(2029px);
+    }
+    .six {
+      transform: rotateY(154.2deg) translateZ(2029px);
+    }
+    .seven {
+      transform: rotateY(179.9deg) translateZ(2029px);
+    }
+    .eight {
+      transform: rotateY(205.6deg) translateZ(2029px);
+    }
+    .nine {
+      transform: rotateY(231.3deg) translateZ(2029px);
+    }
+    .ten {
+      transform: rotateY(257deg) translateZ(2029px);
+    }
+    .eleven {
+      transform: rotateY(282.7deg) translateZ(2029px);
+    }
+    .twelve {
+      transform: rotateY(308.4deg) translateZ(2029px);
+    }
+    .thirteen {
+      transform: rotateY(334.1deg) translateZ(2029px);
+    }
+    .fourteen {
+      transform: rotateY(360deg) translateZ(2029px);
+    }
+    .page4 {
+      top: 510vh;
+      height: 60vh;
+    }
+    .carousel-options {
+    bottom: -55vh;
+    z-index: 1;
+    }
+  }
+
